@@ -50,7 +50,45 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+   @if (session('status'))
+        <div id="erros" class="alert alert-success alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4>Alert!</h4>
 
+        <p> {{ session('status') }}</p>
+      </div>
+@elseif(session('error'))
+<div id="erros" class="alert alert-warning alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4>Warning!</h4>
+
+        <p> {{ session('error') }}</p>
+      </div>
+@elseif(session('danger'))
+<div id="erros" class="alert alert-danger alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <h4>Warning!</h4>
+
+              <p> {{ session('danger') }}</p>
+            </div>
+@elseif(session('primary'))
+<div id="erros" class="alert alert-primary alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <h4>Warning!</h4>
+
+              <p> {{ session('primary') }}</p>
+            </div>
+
+@endif
+@if ($errors->any())
+    <div id="erros" class="alert alert-danger alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <h4>Input Fields Error!!</h4>
+             @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+            </div>
+@endif
     <!-- Main content -->
     <div class="content">
     
