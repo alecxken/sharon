@@ -24,3 +24,19 @@ Route::get('/new-industry', 'CompanyController@createcompany')->name('home');
 Route::post('/industry-store', 'CompanyController@storecompany');
 
 Route::get('/drop-industry/{id}', 'CompanyController@deletecompany');
+
+
+#create-store routes
+Route::get('/calendar','ProductController@calendar');
+
+Route::get('/product-view','ProductController@viewproduct');
+
+Route::get('/product-create','ProductController@createproduct');
+
+Route::get('product-get/{id}','ProductController@getproduct');
+
+Route::get('/product-drop/{id}','ProductController@deleteproduct');
+
+Route::post('/product-store','ProductController@storeproduct');
+
+Route::post('/product-update','ProductController@updateproduct');

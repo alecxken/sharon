@@ -12,20 +12,20 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
+{{-- 
            <li class="nav-item">
                 <a href="#" class="nav-link active ">
                   <i class="fas fa-link"></i>
                   <p>Dashboard</p>
                 </a>
-              </li>
+              </li> --}}
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-cog"></i>
+              <i class="nav-icon fas fa-link"></i>
               <p>
-                Site Settings
+               Dashboard
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -34,10 +34,74 @@
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fas fa-link"></i>
-                  <p>Company Registration</p>
+                  <p>My Profile</p>
                 </a>
               </li>
             </ul>
+
+          
+
+
+              <ul class="nav nav-treeview">
+            
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-link"></i>
+                  <p>Shop</p>
+                </a>
+              </li>
+            </ul>
+
+              <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Settings                 <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+              
+              <li class="nav-item">
+                <a href="{{url('product-create')}}" class="nav-link">
+                  <i class="fas fa-link"></i>
+                  <p> Create New Product</p>
+                </a>
+                  <a href="{{url('product-view')}}" class="nav-link">
+                  <i class="fas fa-link"></i>
+                  <p> View All Products</p>
+                </a>
+                  <a href="{{url('#')}}" class="nav-link">
+                  <i class="fas fa-link"></i>
+                  <p> Stock Levels</p>
+                </a>
+               
+              </li>
+           
+            </ul>
+          </li>
+
+                <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Reports                 <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+              
+              <li class="nav-item">
+                <a href="{{url('product-create')}}" class="nav-link">
+                  <i class="fas fa-link"></i>
+                  <p> View Disbursed Data</p>
+                </a>
+             
+               
+              </li>
+           
+            </ul>
+          </li>
           </li>
       {{--     <li class="nav-item">
             <a href="#" class="nav-link">
