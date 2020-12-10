@@ -19,9 +19,10 @@
                   <table id="example1" class="table table-bordered table-striped table-sm">
                <thead>
                  <tr class="box-success">  
+                  <th>Image</th>
                    <th>Name</th>
                    <th>Price</th>
-                   <th>Available Stock</th>
+                   <th>Current Stock</th>
                       
                    <th>Action</th>                               
                 </tr>
@@ -30,17 +31,18 @@
                   @if(!empty($data))
                    @foreach ($data as $user)
                       <tr>
+                        <td><div class="widget-user-image">
+                <img class="img-circle elevation-2" width="68px" height="68px" src="{{asset('images/'.$user->image)}}" alt="User Avatar">
+              </div></td>
                          <td>{{$user->name}}</td>
                          <td>{{$user->price}}</td>
                           <td>{{$user->current_stock_level}}</td>
-                        @php $pass = ($user->current_stock_level * 10)/(100* $user->min_level_overall) @endphp
-                        <td>
-<div class="progress progress-xs">
-                          <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                        </div>
-                        <div class="progress-bar bg-green" role="progressbar" aria-volumenow="{{$pass}}" aria-volumemin="0" aria-volumemax="100" style="width: {{$pass}}%">
-                              </div></td>
-                         <td><a href="{{url('store-drop/'.$user->id
+                  
+                    
+                         <td>
+                          <a href="{{url('buy-prod/'.$user->id)}}" class="btn btn-success btn-xs">Buy Product</a>
+
+                          <a href="{{url('store-drop/'.$user->id
 )}}" class="btn btn-danger btn-xs">Drop</a></td>
                       </tr>
                   @endforeach

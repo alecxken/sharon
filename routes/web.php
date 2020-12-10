@@ -27,6 +27,8 @@ Route::get('/drop-industry/{id}', 'CompanyController@deletecompany');
 
 
 #create-store routes
+Route::get('/profile','HomeController@user');
+
 Route::get('/calendar','ProductController@calendar');
 
 Route::get('/product-view','ProductController@viewproduct');
