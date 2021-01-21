@@ -1,17 +1,17 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
 @section('content')
 {!! Form::open(['method'=> 'post','url' => 'product-store' ,'files' => true]) !!}
     <section class="content">
+       <div class="card card-info">
+      <div class="card-body">
       <div class="row">
         <div class="col-md-6">
           <div class="card card-secondary">
             <div class="card-header">
               <h3 class="card-title">Product Setup</h3>
 
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                  <i class="fas fa-minus"></i></button>
+           
               </div>
             </div>
                
@@ -53,24 +53,19 @@
               </div>
          
             </div>
-            <div class="card-footer">
-               
-            </div>
+       
 
        
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
-        </div>
+      
         <div class="col-md-6">
           <div class="card card-info">
             <div class="card-header">
               <h3 class="card-title">Product Stock Settings</h3>
 
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                  <i class="fas fa-minus"></i></button>
-              </div>
+          
             </div>
             <div class="card-body table-responsive">
                  <div class="form-group">
@@ -99,6 +94,11 @@
           <!-- /.card -->
         </div>
       </div>
+    </div>
+
+           <div class="card-footer">
+               
+        
       <div class="row">
         <div class="col-12">
          <a href="#" class="btn btn-secondary">Cancel</a>
@@ -106,6 +106,8 @@
         </div>
       </div>
       <hr>
+          </div>
+        </div>
            {!!Form::close()!!}
     </section>
      <script type="text/javascript">

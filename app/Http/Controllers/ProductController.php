@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\LoanSetting;
 class ProductController extends Controller
 {
     //
@@ -100,4 +101,38 @@ class ProductController extends Controller
 
        return back()->with('status','Registered');
 	}
+
+
+	public function createloan()
+	{
+
+			$loan = LoanSetting::all();
+		//	return $loan;
+	return view('settings.loansettings',compact('loan'));
+	}
+
+	public function getloansettings($value)
+	{
+		
+	}
+
+	public function storeloansettings(Request $request )
+	{
+		$data = new LoanSetting();
+		$data->name  = $request->input('name');
+		$data->tenure  = $request->input('tenure');
+		$data->interest  = $request->input('interest');
+		$data->save();
+
+		return back()->with('status','Active');		
+	 }
+
+	 public function getloandestroy($id )
+	{
+		$data = LoanSetting::findorfail($id);
+
+		$data->delete();
+
+	  return back()->with('status','Active');		
+	 }
 }
