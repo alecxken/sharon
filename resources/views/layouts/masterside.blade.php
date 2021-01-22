@@ -1,9 +1,9 @@
     <div class="az-iconbar">
       <a href="" class="az-iconbar-logo"><i class="typcn typcn-chart-bar-outline"></i></a>
       <nav class="nav">
-        <a href="#asideDashboard" class="nav-link active"><i class="typcn typcn-device-laptop"></i></a>
-        <a href="#shopping" class="nav-link"><i class="typcn typcn-shopping-cart"></i></a>
-           <a href="#asideAppsPages" class="nav-link"><i class="typcn typcn-group-outline"></i></a>
+        <a href="#asideDashboard" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}"><i class="typcn typcn-device-laptop"></i></a>
+      <!--   <a href="#shopping" class="nav-link"><i class="typcn typcn-shopping-cart"></i></a> -->
+           <a href="#asideAppsPages" class="nav-link {{ (request()->is('product-view')) ? 'active' : '' }} {{ (request()->is('product-create')) ? 'active' : '' }}"><i class="typcn typcn-group-outline"></i></a>
       </nav>
       <div class="az-iconbar-bottom">
         <a href="" class="az-iconbar-help"><i class="far fa-question-circle"></i></a>
@@ -33,7 +33,7 @@
           <h6 class="az-iconbar-title">Managers &amp; Board</h6>
           <small class="az-iconbar-text">Manage stock and Lending.</small>
           <nav class="nav">
-            <a href="{{url('product-create')}}" class="nav-link">Product Creation</a>
+            <a href="{{url('product-create')}} {{ (request()->is('product-create')) ? 'active' : '' }}" class="nav-link">Product Creation</a>
             <a href="{{url('product-view')}}" class="nav-link">Stock Management</a>
             <a href="app-calendar.html" class="nav-link">Credit Settings</a>
   

@@ -139,132 +139,33 @@
         <h2 class="u-text u-text-default u-text-1">LUNAR OFFER PRODUCTS</h2>
         <p class="u-text u-text-default u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p><!--products--><!--products_options_json--><!--{"type":"Recent","source":"","tags":"","count":6}--><!--/products_options_json-->
         <div class="u-expanded-width u-products u-repeater u-repeater-1"><!--product_item-->
-          <div class="u-align-center-lg u-align-center-sm u-align-center-xl u-container-style u-products-item u-repeater-item u-repeater-item-1">
+            @php $data = \App\Product::all(); @endphp
+                @if(!empty($data))
+                   @foreach ($data as $key => $user)
+          <div class="u-align-center-lg u-align-center-sm u-align-center-xl u-container-style u-products-item u-repeater-item u-repeater-item-{{$key}}">
             <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><!--product_image-->
-              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-1" src="images/4.svg"><!--/product_image-->
+              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-1" src="{{asset('images/'.$user->image)}}"><!--/product_image-->
               <div class="u-align-center u-container-style u-grey-10 u-group u-group-1">
                 <div class="u-container-layout u-valign-middle u-container-layout-2"><!--product_title-->
                   <h4 class="u-product-control u-text u-text-default u-text-3">
-                    <a class="u-product-title-link" href="#"><!--product_title_content-->Product 1 Title<!--/product_title_content--></a>
+                    <a class="u-product-title-link" href="#"><!--product_title_content-->{{$user->name}}<!--/product_title_content--></a>
                   </h4><!--/product_title--><!--product_price-->
                   <div class="u-product-control u-product-price u-product-price-1">
                     <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                      <div class="u-hide-price u-old-price"><!--product_old_price_content-->$20.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                      <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->$17.00<!--/product_regular_price_content--></div><!--/product_regular_price-->
+                      <div class="u-hide-price u-old-price"><!--product_old_price_content-->KES{{$user->price}}<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
+                      <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->{{$user->price + 50}}<!--/product_regular_price_content--></div><!--/product_regular_price-->
                     </div>
                   </div><!--/product_price-->
                 </div>
               </div><!--product_content-->
               <div class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-product-control u-product-desc u-text u-text-default u-text-4"><!--product_content_content-->
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p><!--/product_content_content-->
+                <p>{{$user->desc}}</p><!--/product_content_content-->
               </div><!--/product_content-->
             </div>
-          </div><!--/product_item--><!--product_item-->
-          <div class="u-align-center u-container-style u-products-item u-repeater-item u-repeater-item-2">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><!--product_image-->
-              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-2" src="images/5.svg"><!--/product_image-->
-              <div class="u-align-center u-container-style u-grey-10 u-group u-group-2">
-                <div class="u-container-layout u-valign-middle u-container-layout-4"><!--product_title-->
-                  <h4 class="u-align-center u-product-control u-text u-text-default u-text-5">
-                    <a class="u-product-title-link" href="#"><!--product_title_content-->Product 2 Title<!--/product_title_content--></a>
-                  </h4><!--/product_title--><!--product_price-->
-                  <div class="u-product-control u-product-price u-product-price-2">
-                    <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                      <div class="u-hide-price u-old-price"><!--product_old_price_content-->$300.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                      <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->$245.00<!--/product_regular_price_content--></div><!--/product_regular_price-->
-                    </div>
-                  </div><!--/product_price-->
-                </div>
-              </div><!--product_content-->
-              <div class="u-align-center-sm u-align-center-xs u-product-control u-product-desc u-text u-text-default u-text-6"><!--product_content_content-->
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p><!--/product_content_content-->
-              </div><!--/product_content-->
-            </div>
-          </div><!--/product_item--><!--product_item-->
-          <div class="u-align-center u-container-style u-products-item u-repeater-item u-repeater-item-3">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5"><!--product_image-->
-              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-3" src="images/6.svg"><!--/product_image-->
-              <div class="u-align-center u-container-style u-grey-10 u-group u-group-3">
-                <div class="u-container-layout u-valign-middle u-container-layout-6"><!--product_title-->
-                  <h4 class="u-product-control u-text u-text-default u-text-7">
-                    <a class="u-product-title-link" href="#"><!--product_title_content-->Product 3 Title<!--/product_title_content--></a>
-                  </h4><!--/product_title--><!--product_price-->
-                  <div class="u-product-control u-product-price u-product-price-3">
-                    <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                      <div class="u-hide-price u-old-price"><!--product_old_price_content-->$25.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                      <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->$19.00<!--/product_regular_price_content--></div><!--/product_regular_price-->
-                    </div>
-                  </div><!--/product_price-->
-                </div>
-              </div><!--product_content-->
-              <div class="u-product-control u-product-desc u-text u-text-default u-text-8"><!--product_content_content-->
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p><!--/product_content_content-->
-              </div><!--/product_content-->
-            </div>
-          </div><!--/product_item--><!--product_item-->
-          <div class="u-align-center u-container-style u-products-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7"><!--product_image-->
-              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-4" src="images/7.svg"><!--/product_image-->
-              <div class="u-align-center u-container-style u-grey-10 u-group u-group-4">
-                <div class="u-container-layout u-valign-middle u-container-layout-8"><!--product_title-->
-                  <h4 class="u-product-control u-text u-text-default u-text-9">
-                    <a class="u-product-title-link" href="#"><!--product_title_content-->Product 4 Title<!--/product_title_content--></a>
-                  </h4><!--/product_title--><!--product_price-->
-                  <div class="u-product-control u-product-price u-product-price-4">
-                    <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                      <div class="u-hide-price u-old-price"><!--product_old_price_content-->$25.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                      <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->$20.00<!--/product_regular_price_content--></div><!--/product_regular_price-->
-                    </div>
-                  </div><!--/product_price-->
-                </div>
-              </div><!--product_content-->
-              <div class="u-product-control u-product-desc u-text u-text-default u-text-10"><!--product_content_content-->
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p><!--/product_content_content-->
-              </div><!--/product_content-->
-            </div>
-          </div><!--/product_item--><!--product_item-->
-          <div class="u-align-center u-container-style u-products-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-9"><!--product_image-->
-              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-5" src="images/8.svg"><!--/product_image-->
-              <div class="u-align-center u-container-style u-grey-10 u-group u-group-5">
-                <div class="u-container-layout u-valign-middle u-container-layout-10"><!--product_title-->
-                  <h4 class="u-product-control u-text u-text-default u-text-11">
-                    <a class="u-product-title-link" href="#"><!--product_title_content-->Product 5 Title<!--/product_title_content--></a>
-                  </h4><!--/product_title--><!--product_price-->
-                  <div class="u-product-control u-product-price u-product-price-5">
-                    <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                      <div class="u-hide-price u-old-price"><!--product_old_price_content-->$10.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                      <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->$7.00<!--/product_regular_price_content--></div><!--/product_regular_price-->
-                    </div>
-                  </div><!--/product_price-->
-                </div>
-              </div><!--product_content-->
-              <div class="u-product-control u-product-desc u-text u-text-default u-text-12"><!--product_content_content-->
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p><!--/product_content_content-->
-              </div><!--/product_content-->
-            </div>
-          </div><!--/product_item--><!--product_item-->
-          <div class="u-align-center u-container-style u-products-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-11"><!--product_image-->
-              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-6" src="images/9.svg"><!--/product_image-->
-              <div class="u-align-center u-container-style u-grey-10 u-group u-group-6">
-                <div class="u-container-layout u-valign-middle u-container-layout-12"><!--product_title-->
-                  <h4 class="u-product-control u-text u-text-default u-text-13">
-                    <a class="u-product-title-link" href="#"><!--product_title_content-->Product 6 Title<!--/product_title_content--></a>
-                  </h4><!--/product_title--><!--product_price-->
-                  <div class="u-product-control u-product-price u-product-price-6">
-                    <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                      <div class="u-hide-price u-old-price"><!--product_old_price_content-->$175.00<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                      <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->$150.00<!--/product_regular_price_content--></div><!--/product_regular_price-->
-                    </div>
-                  </div><!--/product_price-->
-                </div>
-              </div><!--product_content-->
-              <div class="u-product-control u-product-desc u-text u-text-default u-text-14"><!--product_content_content-->
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p><!--/product_content_content-->
-              </div><!--/product_content-->
-            </div>
-          </div><!--/product_item-->
+          </div>
+          @endforeach
+          @endif<!--/product_item--><!--product_item-->
+         
         </div><!--/products-->
       </div>
     </section>
