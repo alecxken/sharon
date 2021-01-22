@@ -2,8 +2,9 @@
       <a href="" class="az-iconbar-logo"><i class="typcn typcn-chart-bar-outline"></i></a>
       <nav class="nav">
         <a href="#asideDashboard" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}"><i class="typcn typcn-device-laptop"></i></a>
-      <!--   <a href="#shopping" class="nav-link"><i class="typcn typcn-shopping-cart"></i></a> -->
+        
            <a href="#asideAppsPages" class="nav-link {{ (request()->is('product-view')) ? 'active' : '' }} {{ (request()->is('product-create')) ? 'active' : '' }}"><i class="typcn typcn-group-outline"></i></a>
+           <a href="#shopping" class="nav-link"><i class="fa fa-file"></i></a>
       </nav>
       <div class="az-iconbar-bottom">
         <a href="" class="az-iconbar-help"><i class="far fa-question-circle"></i></a>
@@ -25,8 +26,9 @@
           <small class="az-iconbar-text">The Tabs below assist on system management</small>
 
           <nav class="nav">
-            <a href="dashboard-one.html" class="nav-link">Admin Board</a>
-            <a href="{{url('user_index')}}" class="nav-link">User Administration</a>
+            <a href="{{url('home')}}" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}">Admin Board</a>
+            <a href="{{url('')}}" class="nav-link">User Administration</a>
+            <a href="{{url('')}}" class="nav-link">Loan Settings</a>
           </nav>
         </div>
         <div id="asideAppsPages" class="az-iconbar-pane">
@@ -34,19 +36,20 @@
           <small class="az-iconbar-text">Manage stock and Lending.</small>
           <nav class="nav">
             <a href="{{url('product-create')}} {{ (request()->is('product-create')) ? 'active' : '' }}" class="nav-link">Product Creation</a>
-            <a href="{{url('product-view')}}" class="nav-link">Stock Management</a>
-            <a href="app-calendar.html" class="nav-link">Credit Settings</a>
+            <a href="{{url('product-view')}}" class="nav-link">Product View</a>
+            <a href="{{url('Loan')}}" class="nav-link">Product View</a>
+            <a href="" class="nav-link">Credit Settings</a>
   
           </nav>
         </div><!-- az-iconbar-pane -->
 
         <div id="shopping" class="az-iconbar-pane">
-          <h6 class="az-iconbar-title">Products Section</h6>
-          <small class="az-iconbar-text">You Want it Get It.</small>
+          <h6 class="az-iconbar-title">Reports Section</h6>
+          <small class="az-iconbar-text">Get All your reports.</small>
           <nav class="nav">
-            <a href="app-mail.html" class="nav-link">Shop</a>
-            <a href="app-chat.html" class="nav-link">My Kopa Wallet</a>
-            <a href="app-calendar.html" class="nav-link">My Repayments</a>
+            <a href="" class="nav-link">My Reports</a>
+            <a href="" class="nav-link">Disbursed Loans</a>
+            <a href="" class="nav-link">Repayed Loans</a>
   
           </nav>
         </div><!-- az-iconbar-pane -->
