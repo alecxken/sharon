@@ -39,7 +39,7 @@
                          <td>
                           <a href="{{url('buy-prod/'.$user->id)}}" class="btn btn-success btn-xs">Buy Product</a>
 
-                          <a href="{{url('store-drop/'.$user->id
+                          <a href="{{url('product-drop/'.$user->id
 )}}" class="btn btn-danger btn-xs">Drop</a></td>
                       </tr>
                   @endforeach
