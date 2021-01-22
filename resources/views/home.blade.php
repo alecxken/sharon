@@ -25,7 +25,7 @@
           </div> --}}
         
      
-         
+         @role('Admin')
             <div class="row row-sm">
               <div class="col-md-3">
                 <div class="card card-dashboard-finance">
@@ -60,6 +60,42 @@
                 </div>
               </div><!-- col -->
             </div><!-- row -->
+            @endrole
+            <hr>
+
+            <div class="row row-sm">
+              <div class="col-md-3">
+                <div class="card card-dashboard-finance">
+                  <h6 class="card-title">Products Bought</h6>
+                  
+                  <h2><span>Pcs</span>3</h2>
+                 <span class="tx-12"><span class="tx-danger tx-bold"></span> Products Taken on Loan</span>
+                </div>
+              </div><!-- col -->
+              <div class="col-md-3">
+                <div class="card card-dashboard-finance">
+                  <h6 class="card-title">Active Loan</h6>
+                   <h2><span>Kes</span>32,370<small></small></h2>
+                  <span class="tx-12"><span class="tx-danger tx-bold">0.7%</span> higher vs previous month</span>
+                </div>
+              </div><!-- col -->
+              <div class="col-md-3">
+                <div class="card card-dashboard-finance">
+                  <h6 class="card-title">Loan Balance</h6>
+                   <h2><span>Kes</span>9,112<small></small></h2>
+                  <span class="tx-12"><span class="tx-success tx-bold">0.7%</span> higher vs previous month</span>
+                </div>
+              </div><!-- col -->
+              <div class="col-md-3">
+                <div class="card card-dashboard-finance">
+                  <h6 class="card-title">Total Paid </h6>
+              
+                  <h2><span>Kes</span>8,216<small></small></h2>
+                  <span class="tx-12"><span class="tx-success tx-bold">0.7%</span> higher vs previous month</span>
+                </div>
+              </div><!-- col -->
+            </div><!-- row -->
+         
         
         </div><!-- row -->
 

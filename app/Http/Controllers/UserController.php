@@ -33,7 +33,7 @@ public function __construct() {
 
        $permissions = Permission::all();
 
-       $roles = Permission::all();
+       $roles = Role::all();
 
 
       return view('admin.index',compact('users','permissions','roles'));

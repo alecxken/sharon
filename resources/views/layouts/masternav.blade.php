@@ -62,15 +62,18 @@
                   <div class="az-img-user">
                     <img src="https://via.placeholder.com/500x500" alt="">
                   </div><!-- az-img-user -->
-                  <h6>Aziana Pechon</h6>
-                  <span>Premium Member</span>
+                  <h6>{{Auth::user()->name}}</h6>
+                  <span>Member</span>
                 </div><!-- az-header-profile -->
 
                 <a href="" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
-                <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
+               <!--  <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
                 <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
-                <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
-                <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+                <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a> -->
+                <a href="{{ route('logout') }}"   onclick="event.preventDefault();    document.getElementById('logout-form').submit();" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                       @csrf
+                                   </form>
               </div><!-- dropdown-menu -->
             </div>
           </div><!-- az-header-right -->

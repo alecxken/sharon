@@ -78,7 +78,7 @@
       <div class="az-footer">
         <div class="container-fluid">
            <span>&copy;{{date('Y')}} Lunar System</span>
-          <span>Designed by: Ak</span>
+          <span>Designed by: Sharon</span>
         </div><!-- container -->
       </div><!-- az-footer -->
     </div><!-- az-content -->

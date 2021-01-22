@@ -1,7 +1,7 @@
     <div class="az-iconbar">
       <a href="" class="az-iconbar-logo"><i class="typcn typcn-chart-bar-outline"></i></a>
       <nav class="nav">
-        <a href="#asideDashboard" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}"><i class="typcn typcn-device-laptop"></i></a>
+        <a href="#asideDashboard" class="nav-link {{ (request()->is('home')) ? 'active' : '' }} {{ (request()->is('admin')) ? 'active' : '' }}"><i class="typcn typcn-device-laptop"></i></a>
         
            <a href="#asideAppsPages" class="nav-link {{ (request()->is('product-view')) ? 'active' : '' }} {{ (request()->is('product-create')) ? 'active' : '' }}"><i class="typcn typcn-group-outline"></i></a>
            <a href="#shopping" class="nav-link"><i class="fa fa-file"></i></a>
@@ -22,13 +22,13 @@
       </div><!-- az-iconbar-header -->
       <div class="az-iconbar-body">
         <div id="asideDashboard" class="az-iconbar-pane">
-           <h6 class="az-iconbar-title">Admin Dashbord</h6>
-          <small class="az-iconbar-text">The Tabs below assist on system management</small>
+           <h6 class="az-iconbar-title">Lunar Dashbord</h6>
+          <small class="az-iconbar-text">Manage your Items Here</small>
 
           <nav class="nav">
-            <a href="{{url('home')}}" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}">Admin Board</a>
-            <a href="{{url('')}}" class="nav-link">User Administration</a>
-            <a href="{{url('')}}" class="nav-link">Loan Settings</a>
+            <a href="{{url('home')}}" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}">Dashboard</a>
+          @role('Admin')  <a href="{{url('admin')}}" class="nav-link">User Administration</a>
+            <a href="{{url('')}}" class="nav-link">Loan Settings</a> @endrole
           </nav>
         </div>
         <div id="asideAppsPages" class="az-iconbar-pane">
